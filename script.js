@@ -1,7 +1,6 @@
-document.addEventListener("load", myFunction);
+window.addEventListener('DOMContentLoaded', () => {
 
-function myFunction() {    
-const observer = new IntersectionObserver(entries => {
+	const observer = new IntersectionObserver(entries => {
 		entries.forEach(entry => {
 			const id = entry.target.getAttribute('id');
 			if (entry.intersectionRatio > 0) {
@@ -14,6 +13,6 @@ const observer = new IntersectionObserver(entries => {
 
 	document.querySelectorAll('section[id]').forEach((section) => {
 		observer.observe(section);
-    });
-    
-};
+	});
+	
+});
