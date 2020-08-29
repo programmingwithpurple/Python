@@ -1,5 +1,7 @@
 window.addEventListener('onload', () => {
 
+    setTimeout(function(){
+
 	const observer = new IntersectionObserver(entries => {
 		entries.forEach(entry => {
 			const id = entry.target.getAttribute('id');
@@ -13,6 +15,8 @@ window.addEventListener('onload', () => {
 
 	document.querySelectorAll('section[id]').forEach((section) => {
 		observer.observe(section);
-	});
+    });
+    
+},3000)
 	
 });
