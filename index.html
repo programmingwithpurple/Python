@@ -1,7 +1,9 @@
 <html>
 <head>
 	<script>
-		const observer = new IntersectionObserver(entries => {
+		window.addEventListener('DOMContentLoaded', () => {
+
+	const observer = new IntersectionObserver(entries => {
 		entries.forEach(entry => {
 			const id = entry.target.getAttribute('id');
 			if (entry.intersectionRatio > 0) {
@@ -14,9 +16,9 @@
 
 	document.querySelectorAll('section[id]').forEach((section) => {
 		observer.observe(section);
-    });
-		
-		
+	});
+	
+});
 	</script>
 	<style>
 		/* 1. Enable smooth scrolling */
