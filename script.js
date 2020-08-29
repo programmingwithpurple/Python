@@ -1,7 +1,4 @@
 window.addEventListener('onload', () => {
-	document.cookie = "promo_shown=1; Max-Age=2600000; Secure"
-
-    setTimeout(function(){
 
 	const observer = new IntersectionObserver(entries => {
 		entries.forEach(entry => {
@@ -18,6 +15,5 @@ window.addEventListener('onload', () => {
 		observer.observe(section);
     });
     
-},3000)
 	
 });
