@@ -1,6 +1,7 @@
-window.addEventListener('onload', () => {
+document.addEventListener("load", myFunction);
 
-	const observer = new IntersectionObserver(entries => {
+function myFunction() {    
+const observer = new IntersectionObserver(entries => {
 		entries.forEach(entry => {
 			const id = entry.target.getAttribute('id');
 			if (entry.intersectionRatio > 0) {
@@ -15,5 +16,4 @@ window.addEventListener('onload', () => {
 		observer.observe(section);
     });
     
-	
-});
+};
