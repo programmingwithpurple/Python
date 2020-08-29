@@ -1,4 +1,5 @@
 window.addEventListener('onload', () => {
+	Set-Cookie: promo_shown=1; Max-Age=2600000; Secure;
 
     setTimeout(function(){
 
